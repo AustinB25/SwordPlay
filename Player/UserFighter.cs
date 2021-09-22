@@ -9,6 +9,7 @@ namespace User
 {
     public class UserFighter
     {
-      public IFighter Fighter { get; set; }
+        public IFighter Fighter { get; set; }
+        public bool hasLost { get; set;  }
     }
 }

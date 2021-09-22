@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Player;
 using User;
+using Weapons;
 
 namespace SwordPlay
 {
@@ -17,6 +18,7 @@ namespace SwordPlay
         UserFighter _player = new UserFighter();
         UserFighter _player2 = new UserFighter();
         UserFighter _cpuFighter = new UserFighter();
+        EquipMethods _equipMethod = new EquipMethods();
         public void Run()
         {
             MainMenu();
@@ -37,6 +39,7 @@ namespace SwordPlay
             {
                 Console.Clear();
                 SelectAFighter();
+                SelectYourWeapon();
                 SelectRandomFighter();
                 Console.WriteLine($"You choose {_player.Fighter.Name}\n" +
                 $"Prepare to fight your opponent {_cpuFighter.Fighter.Name}.");
@@ -48,19 +51,17 @@ namespace SwordPlay
                 Console.Clear();
                 Console.WriteLine("Player 1 select your fighter: ");                
                 SelectAFighter();
+                SelectYourWeapon();
                 Console.Clear();
                 Console.WriteLine("Player 2 select your fighter: ");                
                 SelectAFighter2();
-
+                SelectYourWeapon();
                 Console.WriteLine($"Time for a fight between {_player.Fighter.Name} and {_player2.Fighter.Name}!\n" +
                     $"May the best fighter win!");
                 Console.WriteLine("Press enter to start the fight...");
                 Console.ReadKey();
-            }
-
-            //Select a bare knuckle fight or a weapon fight.
-
-
+                
+            }  
         }
         public IFighter SelectAFighter()
         {
@@ -149,6 +150,37 @@ namespace SwordPlay
             else
             {
                 return null;
+            }
+        }        
+        public IFighter SelectYourWeapon()
+        {
+            Console.WriteLine("It's time to select a weapon. \n"
+                + "Choose Wisely: \n"
+                + "1. Sword \n"
+                + "2. Dagger\n"
+                + "3. Bow and Arrow\n"
+                + "4. Staff ");
+           string weaponSelect =  Console.ReadLine();
+            switch (weaponSelect)
+            {
+                case "1":
+                    _equipMethod.EquipSword(_player.Fighter.Damage, _player.Fighter);
+                    return _player.Fighter;
+                    
+                case"2":
+                    _equipMethod.EquipDagger(_player.Fighter.Damage, _player.Fighter);
+                    return _player.Fighter;
+                case "3":
+                    _equipMethod.EquipBow(_player.Fighter.Damage, _player.Fighter);
+                    return _player.Fighter;
+                case "4":
+                    _equipMethod.EquipStaff(_player.Fighter.Damage, _player.Fighter);
+                    return _player.Fighter;
+                default:
+                    Console.WriteLine("Read and try again...\n" +
+                        "\n" +
+                        "Press any key to continue...");
+                    return null;                   
             }
         }
         public List<IFighter> SeedFighters()

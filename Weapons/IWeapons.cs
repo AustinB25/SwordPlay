@@ -12,11 +12,19 @@ namespace Weapons
         int Damage { get; set; }
         int Defense { get; set; }
         WeaponWeight weaponWeight { get; set; }
+        WeaponType weaponType { get; set; }
     }
     public enum WeaponWeight
     {
         Heavy,
         Medium, 
         Light
+    }
+
+    public enum WeaponType
+    {
+        Physical,
+        Magic,
+        Range
     }
 }

@@ -7,24 +7,21 @@ using System.Threading.Tasks;
 
 namespace Weapons
 {
-    
     public class Sword : IWeapons
     {
-        public Sword(string name, int damage, int defense, WeaponWeight weaponWeight)
+        public Sword(string name, int damage, int defense, WeaponWeight weaponWeight, WeaponType weaponType)
         {
             Name = name;
             Damage = damage;
             Defense = defense;
             this.weaponWeight = weaponWeight;
+            this.weaponType = weaponType;
         }
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Defense { get; set; }
         public WeaponWeight weaponWeight { get; set; }
+        public WeaponType weaponType { get; set; }
     }
-    
-   
-        
-
-    }
+}
 
