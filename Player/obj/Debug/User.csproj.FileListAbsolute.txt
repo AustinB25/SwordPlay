@@ -1,0 +1,11 @@
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\User.dll
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\User.pdb
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\IPlayer.dll
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\Weapons.dll
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\IPlayer.pdb
+C:\Users\kpak2\source\repos\SwordPlay\Player\bin\Debug\Weapons.pdb
+C:\Users\kpak2\source\repos\SwordPlay\Player\obj\Debug\User.csproj.AssemblyReference.cache
+C:\Users\kpak2\source\repos\SwordPlay\Player\obj\Debug\User.csproj.CoreCompileInputs.cache
+C:\Users\kpak2\source\repos\SwordPlay\Player\obj\Debug\User.csproj.CopyComplete
+C:\Users\kpak2\source\repos\SwordPlay\Player\obj\Debug\User.dll
+C:\Users\kpak2\source\repos\SwordPlay\Player\obj\Debug\User.pdb

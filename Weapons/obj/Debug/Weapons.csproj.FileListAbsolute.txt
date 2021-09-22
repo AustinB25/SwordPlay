@@ -1,0 +1,6 @@
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\bin\Debug\Weapons.dll
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\bin\Debug\Weapons.pdb
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\obj\Debug\Weapons.csproj.AssemblyReference.cache
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\obj\Debug\Weapons.csproj.CoreCompileInputs.cache
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\obj\Debug\Weapons.dll
+C:\Users\kpak2\source\repos\SwordPlay\Weapons\obj\Debug\Weapons.pdb
