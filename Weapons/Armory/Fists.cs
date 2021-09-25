@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace Weapons.Armory
 {
-    public class Staff :IWeapons
+    public class Fists
     {
-        public Staff(string name, int damage, int defense, WeaponWeight weaponWeight, WeaponType weaponType)
-        {
-            Name = name;
-            Damage = damage;
-            Defense = defense;
-            this.WeaponWeight = weaponWeight;
-            this.WeaponType = weaponType;
-        }
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Defense { get; set; }
@@ -23,4 +15,3 @@ namespace Weapons.Armory
         public WeaponType WeaponType { get; set; }
     }
 }
-

@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Weapons;
 
 namespace Player.PlayerTypes
 {
     public class Archer : IFighter
     {
+        public Archer(){ }
+
         public Archer(string name, int health, int damage, int defense, int speed, int maxRange, int drawBow)
         {
             Name = name;
@@ -27,6 +30,7 @@ namespace Player.PlayerTypes
         public int Speed { get; set; }
         public int MaxRange { get; set; }
         public int DrawBow { get; set; }
+        public IWeapons Weapon { get; set;  }
 
     }
 }

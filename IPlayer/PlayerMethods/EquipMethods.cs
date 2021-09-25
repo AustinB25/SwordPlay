@@ -11,46 +11,56 @@ namespace Player.PlayerMethods
 {
     public class EquipMethods
     {
-        public bool EquipSword(int playerWithoutSwordInt, IFighter playerWithSword)
+        public bool EquipSword(int currentPlayerDamage, IFighter playerWithSword)
         {
-            var addSword = new Sword("Sword", 35, 25, WeaponWeight.Medium, WeaponType.Physical);
-            if (playerWithoutSwordInt <= 25)
+            var addSword = new Sword("Sword", 40, 25, WeaponWeight.Medium, WeaponType.Physical);
+            if (currentPlayerDamage <= 25)
             {
-                playerWithoutSwordInt = addSword.Damage;
-                playerWithSword.Damage = playerWithoutSwordInt;
+                playerWithSword.Weapon = addSword;
+                playerWithSword.Damage = playerWithSword.Weapon.Damage;
                 return true;
             }
             return false;
         }
-        public bool EquipDagger(int playerWithoutDaggerInt, IFighter playerWithDagger)
+        public bool EquipDagger(int currentPlayerDamage, IFighter playerWithDagger)
         {
-            var addDagger = new Dagger("Sword", 35, 25, WeaponWeight.Medium, WeaponType.Physical);
-            if (playerWithoutDaggerInt <= 25)
+            var addDagger = new Dagger("Dagger", 35, 25, WeaponWeight.Light, WeaponType.Physical);
+            if (currentPlayerDamage <= 25)
             {
-                playerWithoutDaggerInt = addDagger.Damage;
-                playerWithDagger.Damage = playerWithoutDaggerInt;
+                playerWithDagger.Weapon = addDagger;
+                playerWithDagger.Damage = addDagger.Damage;                
                 return true;
             }
             return false;
         }
-        public bool EquipBow(int playerWithoutBowInt, IFighter playerWithBow)
+        public bool EquipBow(int currentPlayerDamage, IFighter playerWithBow)
         {
-            var addBow = new BowAndArrow("Sword", 30, 25, WeaponWeight.Light, WeaponType.Range);
-            if (playerWithoutBowInt <= 25)
+            var addBow = new BowAndArrow("Bow and Arrom", 30, 10, WeaponWeight.Light, WeaponType.Range);
+            if (currentPlayerDamage <= 25)
             {
-                playerWithoutBowInt = addBow.Damage;
-                playerWithBow.Damage = playerWithoutBowInt;
+                playerWithBow.Weapon = addBow;
+                playerWithBow.Damage = addBow.Damage;
                 return true;
             }
             return false;
         }
-        public bool EquipStaff(int playerWithoutStaffInt, IFighter playerWithStaff)
+        public bool EquipStaff(int currentPlayerDamage, IFighter playerWithStaff)
         {
-            var addStaff = new Staff("Staff", 35, 25, WeaponWeight.Medium, WeaponType.Magic);
-            if (playerWithoutStaffInt <= 25)
+            var addStaff = new Staff("Staff", 40, 25, WeaponWeight.Medium, WeaponType.Magic);
+            if (currentPlayerDamage <= 25)
             {
-                playerWithoutStaffInt = addStaff.Damage;
-                playerWithStaff.Damage = playerWithoutStaffInt;
+                
+                return true;
+            }
+            return false;
+        }
+        public bool EquipFist(int currentPlayerDamage, IFighter playerFistFighting)
+        {
+            var showThemThoseHands = new Fists("Fists", 20, 10, WeaponWeight.Light, WeaponType.Physical);
+            if (currentPlayerDamage <= 25)
+            {
+                playerFistFighting.Weapon = showThemThoseHands;
+                playerFistFighting.Damage = showThemThoseHands.Damage;
                 return true;
             }
             return false;

@@ -13,14 +13,14 @@ namespace Weapons.Armory
             Name = name;
             Damage = damage;
             Defense = defense;
-            this.weaponWeight = weaponWeight;
-            this.weaponType = weaponType;
+            this.WeaponWeight = weaponWeight;
+            this.WeaponType = weaponType;
         }
 
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Defense { get; set; }
-        public WeaponWeight weaponWeight { get; set; }
-        public WeaponType weaponType { get; set; }
+        public WeaponWeight WeaponWeight { get; set; }
+        public WeaponType WeaponType { get; set; }
     }
 }

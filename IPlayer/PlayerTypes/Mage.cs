@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Weapons;
 
 namespace Player.PlayerTypes
 {
@@ -29,5 +30,6 @@ namespace Player.PlayerTypes
         public int MaxRange { get; set; }
         public int MagicPower { get; set; }
         public int SpellCoolDown { get; set; }
+        public IWeapons Weapon { get; set; }
     }
 }

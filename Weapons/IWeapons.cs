@@ -11,8 +11,8 @@ namespace Weapons
         string Name { get; set; }
         int Damage { get; set; }
         int Defense { get; set; }
-        WeaponWeight weaponWeight { get; set; }
-        WeaponType weaponType { get; set; }
+        WeaponWeight WeaponWeight { get; set; }
+        WeaponType WeaponType { get; set; }
     }
     public enum WeaponWeight
     {

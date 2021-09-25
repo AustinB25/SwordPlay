@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Weapons;
 
 namespace Player.PlayerTypes
 {
@@ -27,6 +28,7 @@ namespace Player.PlayerTypes
         public int MaxRange { get; set; }
         public int CritChance { get; set; }
         public int PoisonChance { get; set; }
+        public IWeapons Weapon { get; set; }
     }
 
 }
